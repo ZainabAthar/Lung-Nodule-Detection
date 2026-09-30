@@ -1,0 +1,106 @@
+Dear Zainab,
+
+I am delighted to welcome you to our research project on "Agentic AI–Based Medical Image Classification for Early Cancer Detection Using CT Scans." Given your strong programming background from your BS-SE and your interest in AI, particularly medical imaging, I believe you can make a substantial contribution to this project. The full proposal is attached for your reference.
+
+═══════════════════════════════════════════════
+PROJECT OVERVIEW
+═══════════════════════════════════════════════
+
+The project aims to develop an AI system that classifies cancer from lung CT scans, with a particular focus on early cancer detection. The work uses the LIDC-IDRI dataset (expert-annotated lung CT scans with nodules) and involves:
+
+1. A multi-stage classification pipeline (CNN/Vision Transformer based)
+2. Uncertainty quantification (MC dropout, deep ensembles, conformal prediction)
+3. Inference-time self-correction mechanisms
+4. Concept-based explainability (TCAV, ACE)
+5. Ordinal classification of the 1-5 malignancy scale
+
+The intended outcome is a publishable journal article in a reputable, impact-factor journal.
+
+═══════════════════════════════════════════════
+WHAT DR. ABDUL SATTAR IS CURRENTLY DOING
+═══════════════════════════════════════════════
+
+Dr. Abdul Sattar is the lead researcher on this project. He is currently:
+
+1. Reviewing the research literature to make the problem statement innovative — he has read and responded to 10 supervisor review questions on the methodology.
+2. Reading the reference papers I have shared with him (available in the shared Google Drive folder: https://drive.google.com/drive/folders/15YSPjMM9_FP-qc1gopz4ZCEMvDTM0eEO) covering:
+   - LLM-based agent architecture (what "agentic AI" truly means)
+   - Uncertainty quantification methods (MC dropout, deep ensembles, conformal prediction, evidential deep learning)
+   - Ordinal regression (CORAL, CORN)
+   - Concept-based explainability (TCAV, ACE)
+   - Test-time augmentation for medical imaging
+3. Working towards key decisions by 14-August-2026: whether to commit to an LLM-based orchestrator architecture or reframe the proposal away from the "Agentic AI" label, and selecting 2 target journals.
+
+The project is being strengthened through a supervisor-review process. Of his 10 initial answers, 1 was fully acceptable, 5 were partially acceptable, and 4 required fundamental revision. The critical issue under discussion is the "Agentic AI" framing — it must either be substantiated with a genuine LLM-orchestrated architecture, or the proposal will be reframed as a "multi-stage uncertainty-aware pipeline."
+
+═══════════════════════════════════════════════
+PROJECT MANAGEMENT SHEET
+═══════════════════════════════════════════════
+
+We track all project tasks, assignments, and deadlines in a shared Google Sheet:
+
+https://docs.google.com/spreadsheets/d/1qsrsvc0NFI-ebndroTu87l0_OG11uKmgbok0o8Asvd0/edit?usp=sharing
+
+The sheet currently contains:
+- Task list with assigned personnel and completion dates
+- The 10 supervisor questions with Dr. Sattar's answers
+- Status tracking for literature review and reading tasks
+
+You will be added to this sheet so we can track your tasks and progress alongside Dr. Sattar's.
+
+═══════════════════════════════════════════════
+YOUR INITIAL TASKS
+═══════════════════════════════════════════════
+
+As a first step, I would like you to complete the following three tasks by 20-August-2026:
+
+TASK 1 — Literature Review: Lung Nodule Classification on LIDC-IDRI
+Search Google Scholar and PubMed for recent papers (2022-2026) on lung nodule benign/malignant classification using the LIDC-IDRI dataset. Produce a 2-3 page summary covering:
+- The current state-of-the-art accuracy/AUC numbers on this dataset
+- Which architectures dominate (CNN vs ViT vs hybrid)
+- What pre-processing and evaluation protocols are commonly used
+- Where the gaps are (what has not been done yet)
+This is critical because we must know exactly what performance levels already exist so we can define our novelty.
+
+TASK 2 — Set Up the Development Environment
+Set up a Python environment with:
+- PyTorch (latest stable) and Torchvision
+- MONAI (medical imaging framework)
+- OpenCV, NumPy, Pandas, Matplotlib
+- Jupyter Notebook or VS Code
+Verify the environment works by running a simple CNN classifier on the MNIST dataset as a smoke test. Document the setup steps in a short README file.
+
+TASK 3 — Explore the LIDC-IDRI Dataset
+Register for access to the LIDC-IDRI dataset (via The Cancer Imaging Archive, TCIA: https://www.cancerimagingarchive.net/). If access is granted promptly, download a small subset and write a script that:
+- Reads DICOM CT series
+- Visualizes 5-10 example slices with nodules
+- Prints basic statistics (number of patients, scans, slice dimensions, pixel spacing)
+If you cannot obtain access quickly, document the registration process and prepare the code skeleton so it can be run as soon as access is granted.
+
+═══════════════════════════════════════════════
+AUTHORSHIP AND RECOGNITION
+═══════════════════════════════════════════════
+
+If you contribute substantial work to this project — particularly in implementation, experimentation, and evaluation — you will be included as a co-author on the journal article(s) we produce. Authorship will follow standard academic practice: significant intellectual or technical contribution, participation in writing/revision, and approval of the final manuscript.
+
+═══════════════════════════════════════════════
+NEXT STEPS
+═══════════════════════════════════════════════
+
+1. Confirm receipt of this email.
+2. Review the attached proposal and the project management sheet.
+3. Start with Task 1 (literature review) — this will give you the context needed for the other tasks.
+4. Share your progress with me and Dr. Sattar as you complete each task.
+
+Dr. Sattar is copied on this email so that we are all aligned on the project direction and your role.
+
+I look forward to working with you on this exciting project. Please feel free to write to me anytime if you have questions.
+
+Best regards,
+
+Dr. Muhammad Atif Chattha
+Dean, Faculty of Information Technology
+University of Lahore
+muhammad.atif@cs.uol.edu.pk
+
+Attached: Research proposal document.

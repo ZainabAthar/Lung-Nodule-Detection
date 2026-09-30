@@ -1,0 +1,8 @@
+﻿
+# Large files (kept locally, not pushed)
+*.zip
+*.npz
+*.pt
+*.pth
+*.h5
+*.ckpt

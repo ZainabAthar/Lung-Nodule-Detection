@@ -1,0 +1,70 @@
+RESEARCH PROPOSAL
+Agentic AI–Based Medical Image Classification for Early Cancer Detection Using CT Scans
+
+Prepared for: UoL Research Project
+Researcher: Dr. Abdul Sattar
+Supervisor: Dr. Muhammad Atif Chattha (Dean IT, University of Lahore)
+
+═══════════════════════════════════════════════
+1. TITLE
+═══════════════════════════════════════════════
+
+Agentic AI–Based Medical Image Classification for Early Cancer Detection Using CT Scans
+
+═══════════════════════════════════════════════
+2. PROBLEM STATEMENT
+═══════════════════════════════════════════════
+
+Recent deep-learning systems can classify cancer from CT images but largely act as static predictors and often lack reasoning, uncertainty handling, self-correction, and interpretable explanations. These limitations can contribute to false negatives, particularly in early cancer detection where visual patterns may be subtle. The proposed research develops an Agentic AI framework with perception, classification, reasoning, self-correction, and explanation agents to improve CT-based cancer classification, robustness, and interpretability.
+
+═══════════════════════════════════════════════
+3. RESEARCH OBJECTIVES
+═══════════════════════════════════════════════
+
+1. To develop and deploy an Agentic AI-based medical image classification system incorporating autonomous agents to process CT scans, select region-of-interest (ROI), and classify cancer.
+2. To test whether agentic reasoning and self-correction mechanisms enhance classification accuracy and reduce false negatives in early cancer detection.
+3. To include and evaluate explainable AI methods within the Agentic AI model to produce interpretable and clinically significant diagnostic results.
+
+═══════════════════════════════════════════════
+4. RESEARCH METHODOLOGY
+═══════════════════════════════════════════════
+
+The study will use the LIDC-IDRI lung CT dataset, containing DICOM CT scans with expert-annotated lung nodules, for binary benign/malignant classification. Preprocessing will include DICOM conversion, resizing (e.g., 224x224), pixel-intensity normalization, ROI extraction, and augmentation through rotation, horizontal flipping, zooming, and contrast manipulation.
+
+The proposed multi-agent pipeline will comprise:
+- Perception Agent for ROI extraction
+- Classification Agent using CNN and/or Vision Transformer (ViT)
+- Reasoning Agent for confidence and uncertainty assessment
+- Self-Correcting Agent for re-analysis of low-confidence cases
+- Explanatory Agent using Grad-CAM/heat maps
+
+A confidence threshold such as 70% will trigger self-correction. The proposed system will be compared with a traditional CNN baseline using accuracy, precision, recall, F1-score and AUC, with particular attention to false negatives, robustness and interpretability.
+
+Implementation will use Python, PyTorch, MONAI and OpenCV; TensorFlow may be used for experimental validation.
+
+═══════════════════════════════════════════════
+5. POSSIBLE OUTCOME
+═══════════════════════════════════════════════
+
+The expected outcome is an Agentic AI-based CT image classification framework that combines autonomous perception, classification, reasoning, self-correction and explainability. The study is expected to improve classification performance, reduce false negatives, increase robustness, and provide visual explanations through Grad-CAM/heat maps. The system is intended as clinical decision support and not as a replacement for medical professionals.
+
+═══════════════════════════════════════════════
+6. STATUS AND CURRENT REVISIONS (August 2026)
+═══════════════════════════════════════════════
+
+The proposal has been reviewed by the supervisor (Dr. Muhammad Atif Chattha) and is currently being strengthened for publication in a reputable journal. Key revisions in progress:
+
+1. Agentic Architecture: Being clarified — either an LLM-based orchestrator with genuine planning/tool use, or reframing as a "multi-stage uncertainty-aware pipeline" without the Agentic AI label.
+2. Self-Correction Mechanism: Must be inference-time (e.g., test-time augmentation, ensemble voting, multi-view aggregation), not training-time hyperparameter changes.
+3. Uncertainty Quantification: MC dropout, deep ensembles, and conformal prediction to be used and compared; contribution beyond off-the-shelf UQ must be defined.
+4. Novelty: Concrete novelty statement required (specific architectural innovation, not just applying a label to LIDC-IDRI).
+5. Statistical Evaluation: Patient-level cross-validation, DeLong/McNemar tests, bootstrap CIs, calibration metrics (ECE, Brier score).
+6. False-Negative Evaluation: Sensitivity at fixed specificity (0.90, 0.95, 0.99), ROC analysis, defined clinical operating points.
+7. Classification Task: Switching to ordinal classification (1-5 malignancy scale) using CORAL/CORN ordinal regression.
+8. Explainability: Concept-based methods (TCAV, ACE) using LIDC-IDRI annotation features (spiculation, margin, subtlety, lobulation, calcification).
+9. Clinical Validation: None will be performed — computational study only.
+10. Target Venue: 2 journals to be selected (e.g., Computers in Biology and Medicine, IEEE JBHI).
+
+Project progress is tracked in a shared Google Sheet: https://docs.google.com/spreadsheets/d/1qsrsvc0NFI-ebndroTu87l0_OG11uKmgbok0o8Asvd0/edit?usp=sharing
+
+Reference papers are available at: https://drive.google.com/drive/folders/15YSPjMM9_FP-qc1gopz4ZCEMvDTM0eEO
